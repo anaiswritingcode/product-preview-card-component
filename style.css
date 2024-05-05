@@ -1,0 +1,105 @@
+/** General styles **/
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  margin: 1rem;
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream);
+}
+
+/** CSS reset **/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/** Product card component **/
+
+.product {
+  display: grid;
+  max-width: 600px;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  overflow: hidden;
+  --content-padding: 1.5rem;
+  --content-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+    --content-padding: 2rem;
+  }
+}
+
+.product__content {
+  display: grid;
+  gap: var(--content-gap);
+  padding: var(--content-padding);
+}
+
+.product__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
