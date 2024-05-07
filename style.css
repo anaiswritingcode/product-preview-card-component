@@ -2,6 +2,7 @@
 
 :root {
   --dark-cyan: hsl(158, 36%, 37%);
+  --light-cyan: hsl(158, 36%, 43%);
   --cream: hsl(30, 38%, 92%);
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -13,8 +14,8 @@ body {
   place-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
-  margin: 1rem;
+  font-size: 0.76rem;
+  margin: 0.85rem;
   color: var(--dark-grayish-blue);
   background-color: var(--cream);
 }
@@ -37,7 +38,7 @@ body {
 }
 
 body {
-  line-height: 1.7;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -78,17 +79,17 @@ h3 {
 .product {
   display: grid;
   max-width: 600px;
-  border-radius: 0.5rem;
+  border-radius: 0.38rem;
   background-color: var(--white);
   overflow: hidden;
-  --content-padding: 1.5rem;
-  --content-gap: 1rem;
+  --content-padding: 1.15rem;
+  --content-gap: 0.75rem;
 }
 
 @media (min-width: 600px) {
   .product {
     grid-template-columns: 1fr 1fr;
-    --content-padding: 2rem;
+    --content-padding: 1.65rem;
   }
 }
 
@@ -102,4 +103,70 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.product__category {
+  font-size: 0.55rem;
+  letter-spacing: 5.7px;
+  text-transform: uppercase;
+}
+
+.product__name {
+  font-size: 1.6rem;
+  font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
+}
+
+.product__description {
+  font-size: 0.7rem;
+}
+
+.product__current-price {
+  font-size: 1.6rem;
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 0.76rem;
+  flex-wrap: wrap;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  height: 0.76px;
+  width: 0.76px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.67em 1.2em;
+  font-size: 0.73rem;
+  color: var(--white);
+  background-color: var(--dark-cyan);
+  font-weight: 700;
+  text-decoration: none;
+  gap: 0.55rem;
+  border: 0;
+  border-radius: 0.38rem;
+  cursor: pointer;
+}
+
+.button[data-icon="cart"]::before {
+  height: 16px;
+  width: 15px;
+  content: "";
+  background-image: url("images/icon-cart.svg");
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--light-cyan);
 }
