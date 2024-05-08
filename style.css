@@ -1,25 +1,3 @@
-/** General styles **/
-
-:root {
-  --dark-cyan: hsl(158, 36%, 37%);
-  --light-cyan: hsl(158, 36%, 43%);
-  --cream: hsl(30, 38%, 92%);
-  --very-dark-blue: hsl(212, 21%, 14%);
-  --dark-grayish-blue: hsl(228, 12%, 48%);
-  --white: hsl(0, 0%, 100%);
-}
-
-body {
-  display: grid;
-  place-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 0.76rem;
-  padding: 0.85rem;
-  color: var(--dark-grayish-blue);
-  background-color: var(--cream);
-}
-
 /** CSS reset **/
 
 *,
@@ -72,6 +50,28 @@ h1,
 h2,
 h3 {
   line-height: 1;
+}
+
+/** General styles **/
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --light-cyan: hsl(158, 36%, 43%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.76rem;
+  padding: 0.85rem;
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream);
 }
 
 /** Product card component **/
