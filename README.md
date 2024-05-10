@@ -1,5 +1,7 @@
 # Product preview card component | Frontend Mentor
 
+![Image preview](design/desktop-preview.jpg)
+
 This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa) that takes **responsive design** and **various accessibility practices** into account.
 
 ## Table of contents
